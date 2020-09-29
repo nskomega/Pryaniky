@@ -1,0 +1,55 @@
+//
+//  DataCell.swift
+//  Pryaniky
+//
+//  Created by Mikhail Danilov on 29.09.2020.
+//
+
+import UIKit
+import SDWebImage
+
+class DataCell: UITableViewCell {
+
+    
+    @IBOutlet weak var imageViewData: UIImageView!
+    @IBOutlet weak var labelData: UILabel!
+    @IBOutlet weak var segmentData: UISegmentedControl!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageViewData.isHidden = true
+        labelData.isHidden = true
+        segmentData.isHidden = true
+        
+    }
+    
+    func setupLabel(dataClass: DataClass){
+        labelData.isHidden = false
+        labelData.text = dataClass.text
+    }
+    
+    func setupImage(dataClass: DataClass){
+        imageViewData.isHidden = false
+        labelData.isHidden = false
+        labelData.text = dataClass.text
+        if let url = dataClass.url{
+            imageViewData.sd_setImage(with: URL(string: url))
+        }
+    }
+    
+    func setupSegment(dataClass: DataClass){
+        segmentData.isHidden = false
+        if let selectedIndex = dataClass.selectedID, let variants = dataClass.variants {
+            segmentData.selectedSegmentIndex = selectedIndex
+            variants.forEach { (variant) in
+            
+                segmentData.setTitle(variant.text, forSegmentAt: variant.id)
+            }
+        }
+    }
+}

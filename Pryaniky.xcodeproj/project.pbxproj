@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,15 @@
 		8F596E83252350BA00D3EFB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F596E81252350BA00D3EFB3 /* Main.storyboard */; };
 		8F596E85252350BD00D3EFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F596E84252350BD00D3EFB3 /* Assets.xcassets */; };
 		8F596E88252350BD00D3EFB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F596E86252350BD00D3EFB3 /* LaunchScreen.storyboard */; };
+		8F596E90252353F000D3EFB3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F596E8F252353F000D3EFB3 /* Data.swift */; };
+		8F596E922523540700D3EFB3 /* DataLoaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F596E912523540700D3EFB3 /* DataLoaders.swift */; };
+		8F596E942523542900D3EFB3 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F596E932523542900D3EFB3 /* DataCell.swift */; };
+		8F596EB62523A38400D3EFB3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F596EB52523A38400D3EFB3 /* SecondViewController.swift */; };
+		C7905FC9D15352A02982FA90 /* Pods_Pryaniky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBACDE9A4486A1E232A1959B /* Pods_Pryaniky.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35AE12B9F90514567008214C /* Pods-Pryaniky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pryaniky.debug.xcconfig"; path = "Target Support Files/Pods-Pryaniky/Pods-Pryaniky.debug.xcconfig"; sourceTree = "<group>"; };
 		8F596E78252350BA00D3EFB3 /* Pryaniky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pryaniky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F596E7B252350BA00D3EFB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F596E7D252350BA00D3EFB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		8F596E84252350BD00D3EFB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F596E87252350BD00D3EFB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F596E89252350BD00D3EFB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F596E8F252353F000D3EFB3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8F596E912523540700D3EFB3 /* DataLoaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoaders.swift; sourceTree = "<group>"; };
+		8F596E932523542900D3EFB3 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		8F596EB52523A38400D3EFB3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9D775B34186BDD432206C4EC /* Pods-Pryaniky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pryaniky.release.xcconfig"; path = "Target Support Files/Pods-Pryaniky/Pods-Pryaniky.release.xcconfig"; sourceTree = "<group>"; };
+		DBACDE9A4486A1E232A1959B /* Pods_Pryaniky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pryaniky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7905FC9D15352A02982FA90 /* Pods_Pryaniky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				8F596E7A252350BA00D3EFB3 /* Pryaniky */,
 				8F596E79252350BA00D3EFB3 /* Products */,
+				9066DCB0935A6E24B0B87A62 /* Pods */,
+				BC1CC7802AD2D396570265C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +74,33 @@
 				8F596E7B252350BA00D3EFB3 /* AppDelegate.swift */,
 				8F596E7D252350BA00D3EFB3 /* SceneDelegate.swift */,
 				8F596E7F252350BA00D3EFB3 /* ViewController.swift */,
+				8F596EB52523A38400D3EFB3 /* SecondViewController.swift */,
 				8F596E81252350BA00D3EFB3 /* Main.storyboard */,
 				8F596E84252350BD00D3EFB3 /* Assets.xcassets */,
 				8F596E86252350BD00D3EFB3 /* LaunchScreen.storyboard */,
 				8F596E89252350BD00D3EFB3 /* Info.plist */,
+				8F596E8F252353F000D3EFB3 /* Data.swift */,
+				8F596E912523540700D3EFB3 /* DataLoaders.swift */,
+				8F596E932523542900D3EFB3 /* DataCell.swift */,
 			);
 			path = Pryaniky;
+			sourceTree = "<group>";
+		};
+		9066DCB0935A6E24B0B87A62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35AE12B9F90514567008214C /* Pods-Pryaniky.debug.xcconfig */,
+				9D775B34186BDD432206C4EC /* Pods-Pryaniky.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC1CC7802AD2D396570265C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBACDE9A4486A1E232A1959B /* Pods_Pryaniky.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F596E8C252350BD00D3EFB3 /* Build configuration list for PBXNativeTarget "Pryaniky" */;
 			buildPhases = (
+				DDEC0F48615D42216853EE89 /* [CP] Check Pods Manifest.lock */,
 				8F596E74252350BA00D3EFB3 /* Sources */,
 				8F596E75252350BA00D3EFB3 /* Frameworks */,
 				8F596E76252350BA00D3EFB3 /* Resources */,
+				6E6E4EFE4C4A2B9725B8B9FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +170,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E6E4EFE4C4A2B9725B8B9FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pryaniky/Pods-Pryaniky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pryaniky/Pods-Pryaniky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pryaniky/Pods-Pryaniky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEC0F48615D42216853EE89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pryaniky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F596E74252350BA00D3EFB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8F596E80252350BA00D3EFB3 /* ViewController.swift in Sources */,
+				8F596E942523542900D3EFB3 /* DataCell.swift in Sources */,
 				8F596E7C252350BA00D3EFB3 /* AppDelegate.swift in Sources */,
 				8F596E7E252350BA00D3EFB3 /* SceneDelegate.swift in Sources */,
+				8F596EB62523A38400D3EFB3 /* SecondViewController.swift in Sources */,
+				8F596E90252353F000D3EFB3 /* Data.swift in Sources */,
+				8F596E922523540700D3EFB3 /* DataLoaders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +367,7 @@
 		};
 		8F596E8D252350BD00D3EFB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35AE12B9F90514567008214C /* Pods-Pryaniky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +387,7 @@
 		};
 		8F596E8E252350BD00D3EFB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D775B34186BDD432206C4EC /* Pods-Pryaniky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
