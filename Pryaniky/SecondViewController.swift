@@ -17,6 +17,6 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = datum?.name
-        textLabel.text = datum?.data.text ?? "Segment"
+        textLabel.text = datum?.data?.text ?? "Segment"
     }
 }

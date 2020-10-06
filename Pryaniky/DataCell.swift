@@ -42,13 +42,31 @@ class DataCell: UITableViewCell {
         }
     }
     
+    func setupAudio(dataClass: DataClass){
+        imageViewData.isHidden = false
+        labelData.isHidden = false
+        labelData.text = dataClass.mediaUrl
+        if let url = dataClass.coverUrl{
+            imageViewData.sd_setImage(with: URL(string: url))
+        }
+    }
+    
+    func setupVideo(dataClass: DataClass){
+        imageViewData.isHidden = false
+        labelData.isHidden = false
+        labelData.text = dataClass.mediaUrl
+        if let url = dataClass.coverUrl{
+            imageViewData.sd_setImage(with: URL(string: url))
+        }
+    }
+    
     func setupSegment(dataClass: DataClass){
         segmentData.isHidden = false
-        if let selectedIndex = dataClass.selectedID, let variants = dataClass.variants {
+        if let variants = dataClass.variants, let selectedIndex = variants.firstIndex(where: {$0.id == dataClass.selectedID }) {
             segmentData.selectedSegmentIndex = selectedIndex
-            variants.forEach { (variant) in
+            variants.enumerated().forEach{ (index, variant) in
             
-                segmentData.setTitle(variant.text, forSegmentAt: variant.id)
+                segmentData.setTitle(variant.text, forSegmentAt: index)
             }
         }
     }
